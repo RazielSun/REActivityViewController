@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>543E7929-E346-4208-B312-B9380F5674E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>REActivityViewControllerExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8106A350-1011-40A5-A96D-6383AC17625A</key>
+		<string>https://github.com/RazielSun/REActivityViewController.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>REActivityViewControllerExample/REActivityViewControllerExample.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8106A350-1011-40A5-A96D-6383AC17625A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/RazielSun/REActivityViewController.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8106A350-1011-40A5-A96D-6383AC17625A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8106A350-1011-40A5-A96D-6383AC17625A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>REActivityViewController</string>
+		</dict>
+	</array>
+</dict>
+</plist>
