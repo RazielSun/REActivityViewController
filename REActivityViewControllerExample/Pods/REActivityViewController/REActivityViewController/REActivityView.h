@@ -41,4 +41,7 @@
 
 - (id)initWithFrame:(CGRect)frame activities:(NSArray *)activities;
 
+- (void) cancelButtonPressed;
+- (void) buttonPressed:(UIButton *)button;
+
 @end

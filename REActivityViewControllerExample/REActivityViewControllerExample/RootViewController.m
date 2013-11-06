@@ -28,20 +28,8 @@
     REFacebookActivity *facebookActivity = [[REFacebookActivity alloc] init];
     RETwitterActivity *twitterActivity = [[RETwitterActivity alloc] init];
     REVKActivity *vkActivity = [[REVKActivity alloc] initWithClientId:@"3396235"];
-    RETumblrActivity *tumblrActivity = [[RETumblrActivity alloc] initWithConsumerKey:@"CONSUMER KEY" consumerSecret:@"CONSUMER SECRET"];
-    REMessageActivity *messageActivity = [[REMessageActivity alloc] init];
-    REMailActivity *mailActivity = [[REMailActivity alloc] init];
-    RESafariActivity *safariActivity = [[RESafariActivity alloc] init];
     REChromeActivity *chromeActivity = [[REChromeActivity alloc] init];
-    REPocketActivity *pocketActivity = [[REPocketActivity alloc] initWithConsumerKey:@"11708-5a8fa563a3485a5133ef1b56"];
-    REInstapaperActivity *instapaperActivity = [[REInstapaperActivity alloc] init];
-    REReadabilityActivity *readabilityActivity = [[REReadabilityActivity alloc] initWithConsumerKey:@"CONSUMER KEY" consumerSecret:@"CONSUMER SECRET"];
-    REDiigoActivity *diigoActivity = [[REDiigoActivity alloc] initWithAPIKey:@"ed3f4751e5fe5271"];
-    REKipptActivity *kipptActivity = [[REKipptActivity alloc] init];
     RESaveToCameraRollActivity *saveToCameraRollActivity = [[RESaveToCameraRollActivity alloc] init];
-    REMapsActivity *mapsActivity = [[REMapsActivity alloc] init];
-    REPrintActivity *printActivity = [[REPrintActivity alloc] init];
-    RECopyActivity *copyActivity = [[RECopyActivity alloc] init];
     
     // Create some custom activity
     //
@@ -56,11 +44,8 @@
     // Compile activities into an array, we will pass that array to
     // REActivityViewController on the next step
     //
-    NSArray *activities = @[facebookActivity, twitterActivity, vkActivity, tumblrActivity,
-                            messageActivity, mailActivity, safariActivity, chromeActivity, pocketActivity,
-                            instapaperActivity, readabilityActivity, diigoActivity, kipptActivity,
-                            saveToCameraRollActivity, mapsActivity, printActivity,
-                            copyActivity, customActivity];
+    NSArray *activities = @[facebookActivity, twitterActivity, vkActivity, chromeActivity,
+                            saveToCameraRollActivity, customActivity];
     
     // Create REActivityViewController controller and assign data source
     //
