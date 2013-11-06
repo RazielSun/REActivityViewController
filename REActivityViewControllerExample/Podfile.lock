@@ -1,0 +1,17 @@
+PODS:
+  - REActivityViewController (1.6.7):
+    - REComposeViewController
+  - REComposeViewController (2.3)
+
+DEPENDENCIES:
+  - REActivityViewController (from `https://github.com/RazielSun/REActivityViewController.git`)
+
+EXTERNAL SOURCES:
+  REActivityViewController:
+    :git: https://github.com/RazielSun/REActivityViewController.git
+
+SPEC CHECKSUMS:
+  REActivityViewController: 3505608771857ffb70d6e2ca5458b04f3472bbf9
+  REComposeViewController: 5c591d03b0a261996e4de5543540d5a829351e4f
+
+COCOAPODS: 0.27.1
