@@ -36,17 +36,8 @@ Add `#include "REActivityViewController.h"` to the top of classes that will use 
 `REActivityViewController` needs to be linked with the following frameworks:
 
 * QuartzCore
-* AssetsLibrary
-* MessageUI
-* Twitter
 
-The following framework must be added as optional (weak reference):
-
-* Social
-
-Dependencies:
-
-* [REComposeViewController](https://github.com/romaonthego/REComposeViewController) ~> 2.1.2
+Remove all dependencies. Use only for custom activity.
 
 ## Customization
 

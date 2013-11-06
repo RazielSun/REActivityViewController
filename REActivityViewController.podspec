@@ -15,10 +15,8 @@ Pod::Spec.new do |s|
   s.resources = "REActivityViewController/REActivityViewController.bundle", "REActivityViewController/Localizations/*.lproj"
 
   s.ios.deployment_target = '5.0'
-  s.ios.frameworks = 'QuartzCore', 'AssetsLibrary', 'MessageUI', 'Twitter'
-  s.ios.weak_frameworks = 'Social'
+  s.ios.frameworks = 'QuartzCore'
 
-  s.dependency 'REComposeViewController'
   s.prefix_header_contents = <<-EOS
 #import <Availability.h>
 
