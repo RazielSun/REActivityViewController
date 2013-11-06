@@ -73,7 +73,7 @@
                                           [UIScreen mainScreen].bounds.size.height : 0,
                                           self.view.frame.size.width, self.height);
         
-        if (__IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f)
         {
             _activityView = [[RESevenActivityView alloc] initWithFrame:activityFrame
                                                             activities:activities];
@@ -164,7 +164,7 @@
 {
     NSInteger tempHeight = 0;
     
-    if (__IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f)
     {
         tempHeight = -28;
     }
