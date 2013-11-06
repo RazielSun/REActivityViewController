@@ -41,11 +41,10 @@
     // Create REActivityViewController controller and assign data source
     //
     REActivityViewController *activityViewController = [[REActivityViewController alloc] initWithViewController:self activities:activities];
+    
     activityViewController.userInfo = @{
                                         @"image": [UIImage imageNamed:@"Flower.jpg"],
                                         @"text": @"Hello world!",
-                                        @"url": [NSURL URLWithString:@"https://github.com/romaonthego/REActivityViewController"],
-                                        @"coordinate": @{@"latitude": @(37.751586275), @"longitude": @(-122.447721511)}
                                         };
     
     [activityViewController presentFromRootViewController];

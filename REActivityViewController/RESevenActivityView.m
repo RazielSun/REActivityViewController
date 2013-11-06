@@ -10,7 +10,7 @@
 
 @implementation RESevenActivityView
 
-#define CANCEL_BTN_HEIGHT   50
+#define CANCEL_BTN_HEIGHT       53
 
 - (id) initWithFrame:(CGRect)frame activities:(NSArray *)activities
 {
@@ -24,7 +24,9 @@
         
         self.cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         
-        [self.cancelButton setBackgroundImage:nil forState:UIControlStateNormal];
+        [self.cancelButton setBackgroundImage:[[UIImage imageNamed:@"REActivityViewController.bundle/Button_style2"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)] forState:UIControlStateNormal];
+        
+        [self.cancelButton setBackgroundImage:[[UIImage imageNamed:@"REActivityViewController.bundle/Button_style2_up"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)] forState:UIControlStateHighlighted];
         
         CGFloat posY = frame.size.height - CANCEL_BTN_HEIGHT;
         
@@ -44,14 +46,14 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(x, y, 80, 80)];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(10, 0, 59, 59);
+    button.frame = CGRectMake(10, 0, 60, 60);
     button.tag = index;
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [button setBackgroundImage:activity.image forState:UIControlStateNormal];
     button.accessibilityLabel = activity.title;
     [view addSubview:button];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 59, 80, 30)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, 80, 26)];
     label.textAlignment = UITextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor blackColor];
