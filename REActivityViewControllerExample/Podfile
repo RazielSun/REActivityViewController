@@ -1,2 +1,2 @@
 platform :ios, '5.0'
-pod 'REActivityViewController', :path => 'https://github.com/RazielSun/REActivityViewController.git'
+pod 'REActivityViewController', :git => 'https://github.com/RazielSun/REActivityViewController.git'

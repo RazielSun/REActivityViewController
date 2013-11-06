@@ -23,23 +23,24 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [FBSession.activeSession close];
+    //[FBSession.activeSession close];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [FBSession.activeSession handleDidBecomeActive];
+    //[FBSession.activeSession handleDidBecomeActive];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    if ([[PocketAPI sharedAPI] handleOpenURL:url]){
+    /*if ([[PocketAPI sharedAPI] handleOpenURL:url]){
             return YES;
 	} else{
             if ([FBSession.activeSession handleOpenURL:url]) {
                 return YES;
             }
-    }
+    }*/
+    
     return NO;
 }
 

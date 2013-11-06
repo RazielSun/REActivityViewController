@@ -23,6 +23,8 @@
 // THE SOFTWARE.
 //
 
+//Custom activities deleted
+/*
 #import "REFacebookActivity.h"
 #import "RETwitterActivity.h"
 #import "REMessageActivity.h"
@@ -40,4 +42,4 @@
 #import "REReadabilityActivity.h"
 #import "REDiigoActivity.h"
 #import "REKipptActivity.h"
-#import "RESinaWeiboActivity.h"
+#import "RESinaWeiboActivity.h"*/

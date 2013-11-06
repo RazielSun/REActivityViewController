@@ -23,14 +23,6 @@
 
 - (void)buttonPressed
 {
-    // Prepare activities
-    //
-    REFacebookActivity *facebookActivity = [[REFacebookActivity alloc] init];
-    RETwitterActivity *twitterActivity = [[RETwitterActivity alloc] init];
-    REVKActivity *vkActivity = [[REVKActivity alloc] initWithClientId:@"3396235"];
-    REChromeActivity *chromeActivity = [[REChromeActivity alloc] init];
-    RESaveToCameraRollActivity *saveToCameraRollActivity = [[RESaveToCameraRollActivity alloc] init];
-    
     // Create some custom activity
     //
     REActivity *customActivity = [[REActivity alloc] initWithTitle:@"Custom"
@@ -44,8 +36,7 @@
     // Compile activities into an array, we will pass that array to
     // REActivityViewController on the next step
     //
-    NSArray *activities = @[facebookActivity, twitterActivity, vkActivity, chromeActivity,
-                            saveToCameraRollActivity, customActivity];
+    NSArray *activities = @[customActivity];
     
     // Create REActivityViewController controller and assign data source
     //

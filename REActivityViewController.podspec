@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'QuartzCore', 'AssetsLibrary', 'MessageUI', 'Twitter'
   s.ios.weak_frameworks = 'Social'
 
-  s.dependency 'REComposeViewController', '~> 2.1.2'
+  s.dependency 'REComposeViewController'
   s.prefix_header_contents = <<-EOS
 #import <Availability.h>
 
