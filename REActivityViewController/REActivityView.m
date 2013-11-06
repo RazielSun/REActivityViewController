@@ -244,12 +244,12 @@
 #pragma mark -
 #pragma mark Button action
 
-- (void)cancelButtonPressed
+- (void) cancelButtonPressed
 {
     [_activityViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)buttonPressed:(UIButton *)button
+- (void) buttonPressed:(UIButton *)button
 {
     REActivity *activity = [_activities objectAtIndex:button.tag];
     activity.activityViewController = _activityViewController;

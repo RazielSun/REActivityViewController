@@ -24,7 +24,10 @@
 //
 
 #import "REActivityViewController.h"
+
 #import "REActivityView.h"
+
+#import "RESevenActivityView.h"
 
 @interface REActivityViewController ()
 
@@ -64,11 +67,23 @@
         }
         
         _activities = activities;
-        _activityView = [[REActivityView alloc] initWithFrame:CGRectMake(0,
-                                                                         UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ?
-                                                                         [UIScreen mainScreen].bounds.size.height : 0,
-                                                                         self.view.frame.size.width, self.height)
-                                                   activities:activities];
+        
+        CGRect activityFrame = CGRectMake(0,
+                                          UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ?
+                                          [UIScreen mainScreen].bounds.size.height : 0,
+                                          self.view.frame.size.width, self.height);
+        
+        if (__IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
+        {
+            _activityView = [[RESevenActivityView alloc] initWithFrame:activityFrame
+                                                            activities:activities];
+        }
+        else
+        {
+            _activityView = [[REActivityView alloc] initWithFrame:activityFrame
+                                                       activities:activities];
+        }
+        
         _activityView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _activityView.activityViewController = self;
         [self.view addSubview:_activityView];
@@ -147,18 +162,46 @@
 
 - (NSInteger)height
 {
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (UIInterfaceOrientationIsPortrait(interfaceOrientation) || UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        if (_activities.count <= 3) return 214;
-        if (_activities.count <= 6) return 317;
-        if (IS_IPHONE_5 && _activities.count > 9) {
-            return 517;
-        }
-        return 417;
-    } else {
-        if (_activities.count <= 4) return 214;
-        return 310;
+    NSInteger tempHeight = 0;
+    
+    if (__IPHONE_OS_VERSION_MAX_ALLOWED >= 70000)
+    {
+        tempHeight = -28;
     }
+    
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation) || UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        if (_activities.count <= 3)
+        {
+            tempHeight += 214;
+        }
+        else if (_activities.count <= 6)
+        {
+            tempHeight += 317;
+        }
+        else if (IS_IPHONE_5 && _activities.count > 9)
+        {
+            tempHeight += 517;
+        }
+        else
+        {
+            tempHeight += 417;
+        }
+    }
+    else
+    {
+        if (_activities.count <= 4)
+        {
+            tempHeight +=  214;
+        }
+        else
+        {
+            tempHeight +=  310;
+        }
+    }
+    
+    return tempHeight;
 }
 
 - (void)viewDidLoad
