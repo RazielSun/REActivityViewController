@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name        = 'REActivityViewController'
-  s.version     = '1.6.7'
+  s.version     = '1.7'
   s.authors     = { 'Roman Efimov' => 'romefimov@gmail.com' }
   s.homepage    = 'https://github.com/romaonthego/REActivityViewController'
-  s.summary     = 'Open source alternative to UIActivityViewController, highly customizable and compatible with iOS 5.0.'
+  s.summary     = 'Open source alternative to UIActivityViewController, fork from original REActivityViewController'
   s.source      = { :git => 'https://github.com/RazielSun/REActivityViewController.git',
-                    :tag => '1.6.7' }
+                    :tag => '1.7' }
   s.license     = { :type => "MIT", :file => "LICENSE" }
 
   s.platform = :ios, '5.0'
